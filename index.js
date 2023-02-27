@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const { default: Choices } = require('inquirer/lib/objects/choices');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 console.log('readme gen running?')
 
@@ -43,8 +44,8 @@ const questions = [
     },
     {
         type:'list',
-        name:'Licence',
-        message:'License?'
+        name:'licence',
+        message:'License?',
         choices:['MIT', 'ISC','GNUPLv3'],
         filter(val){
             return val.toLowerCase();
@@ -53,17 +54,32 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+// function writeToFile(generateMarkdown, answers) {
+//     const mark = generateMarkdown.answers
+//     fs.writetoFile('README.md', mark, err=>{
+//         if(err){
+//             console.log('Could not save the file')
+//         } else{
+//             console.log('Success; README file is aded to the project!')
+//         }
  
-}
+// })
+// }
 
 // TODO: Create a function to initialize app
 function init() {
     return inquirer.prompt(questions)
     .then((answers)=>{
         console.log(answers)
-        return answers
-    })
+        fs.writeFile('README.md', generateMarkdown(answers), err=>{
+                    if(err){
+                        console.log('Could not save the file')
+                    } else{
+                        console.log('Success; README file is aded to the project!')
+                    }
+             
+            })
+        })
     .catch((error)=> {
         console.log(error)
     })
