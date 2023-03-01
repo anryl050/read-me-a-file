@@ -1,28 +1,29 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === undefined) {
+  license = license.replace(/\s/g, "")
+  if (!license) {
     return "";
-  // } else if (license === "None") {
-  //   return "";
+  } else if (license === "None") {
+    return "";
   } else {
-    return `[![Badge](https://img.shields.io/badge/license-${license}-green?style=plastic&logo=appveyor)]`;
+    return `![Badge](https://img.shields.io/badge/license-${license}-green?style=plastic&logo=appveyor)`;
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === undefined) {
+  if (!license) {
     return "";
   } else if (license === "Apache 2.0") {
-    return `[license](https://choosealicense.com/licenses/apache-2.0/)`;
+    return `[${license}](https://choosealicense.com/licenses/apache-2.0/)`;
   } else if (license === "GNUPLv3") {
-    return `[license](https://choosealicense.com/licenses/gpl-3.0/)`;
+    return `[${license}](https://choosealicense.com/licenses/gpl-3.0/)`;
   } else if (license === "MIT") {
-    return `[license](https://choosealicense.com/licenses/mit/)`;
+    return `[${license}](https://choosealicense.com/licenses/mit/)`;
   } else if (license === "Mozilla") {
-    return `[license](https://choosealicense.com/licenses/mpl-2.0/)`
+    return `[${license}](https://choosealicense.com/licenses/mpl-2.0/)`
   } else if (license === "Other") {
     return "Other";
   } else {
@@ -34,7 +35,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(license){
-    return `Licensed under the ${renderLicenseLink(answers.license)} license.`
+    return `Licensed under the ${renderLicenseLink(license)} license.`
   } else {
     return ''
   }
@@ -49,16 +50,17 @@ function generateMarkdown(answers) {
 ${renderLicenseBadge(answers.license)}
 
 ## Table of Content
-#### - [Project Desctiption](#Description)
-#### - [Installation](#Installation)
-#### - [Usage](#Usage)
-#### - [Features](#Features)
-#### - [Tests](#Tests)
-#### - [Questions](#Questions)
-#### - [Contribution](#Contribution)
-#### - [License](#License)
+#### * [Project Desctiption](#description)
+#### * [Video Flow Through Application](#video)
+#### * [Installation](#installation)
+#### * [Usage](#usage)
+#### * [Features](#features)
+#### * [Tests](#tests)
+#### * [Questions](#questions)
+#### * [Contribution](#contribution)
+#### * [License](#license)
 
-## Description
+## Project Description
 ${answers.description}
 
 ## Installation
@@ -82,6 +84,9 @@ ${answers.contribution}
 
 ## License
 ${renderLicenseSection(answers.license)}
+
+## Video Flow Through Application
+${answers.video}
 
   `;
 }
