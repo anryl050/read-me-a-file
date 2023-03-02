@@ -18,9 +18,6 @@
 ## Project Description
 Create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package. 
 
-## Video Exaplanation
-g
-
 ### User Story
 As a developer
 I WANT a README generator
@@ -43,6 +40,8 @@ GIVEN a command-line application that accepts user input:
 
 - WHEN I click on the links in the Table of Contents, THEN I am taken to the corresponding section of the README.
 
+## Video Exaplanation
+g
 
 ## Installation
 - Install the node.js 
