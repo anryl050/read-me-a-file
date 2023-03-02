@@ -65,7 +65,7 @@ N/A
 None
 
 ## License
-Licensed under the [MIT](https://choosealicense.com/licenses/MIT/) license.
+Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
 
 ## Video Exaplanation
 g
