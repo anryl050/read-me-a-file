@@ -6,7 +6,7 @@
 
 ## Table of Content
 #### * [Project Desctiption](#description)
-#### * [Video Flow Through Application](#video)
+#### * [Video Explanation](#video)
 #### * [Installation](#installation)
 #### * [Usage](#usage)
 #### * [Features](#features)
@@ -17,6 +17,9 @@
 
 ## Project Description
 Create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package. 
+
+## Video Exaplanation
+g
 
 ### User Story
 As a developer
@@ -66,8 +69,5 @@ None
 
 ## License
 Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
-
-## Video Exaplanation
-g
 
   
