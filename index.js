@@ -71,18 +71,13 @@ const questions = [
 ];
 
 // TODO: Create a function to initialize app
-function init() {
+const init = () => {
     return inquirer.prompt(questions)
         .then((answers) => {
-            // console.log(answers)
-            fs.writeFile('README.md', generateMarkdown(answers), err => {
-                if (err) {
-                    console.log('Could not save the file')
-                } else {
-                    console.log('Success; README file is added to the project!')
-                }
-
-            })
+            fs.writeFile('./example/README.md', generateMarkdown(answers), err => {
+                return err ? console.log('Could not save the file')
+                : console.log('Success; README file is added to the project!');
+                })
         })
         .catch((error) => {
             console.log(error)
