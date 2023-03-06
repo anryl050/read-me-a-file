@@ -41,7 +41,7 @@ GIVEN a command-line application that accepts user input:
 - WHEN I click on the links in the Table of Contents, THEN I am taken to the corresponding section of the README.
 
 ## Video Exaplanation
-g
+https://watch.screencastify.com/v/1qKED08DzQr1SB5tVccS
 
 ## Installation
 - Install the node.js 
