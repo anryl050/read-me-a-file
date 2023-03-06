@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+//Included packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Created an array of questions for user input
 const questions = [
 {
     type: 'input',
@@ -63,18 +63,18 @@ const questions = [
         'None'
     ],
 },
-{
-    type: 'input',
-    name: 'video',
-    message: 'Please add a link to the video flow through your application:'
-},
+
 ];
 
-// TODO: Create a function to initialize app
+// Created a function to initialize app
+
+// used arrow function to optimize the code 
 const init = () => {
     return inquirer.prompt(questions)
         .then((answers) => {
+            // saves the new README.md file in the 'example" folder (help provided by the TA)
             fs.writeFile('./example/README.md', generateMarkdown(answers), err => {
+                // used ternary operator to optimaze the code for the 'if else' loop
                 return err ? console.log('Could not save the file')
                 : console.log('Success; README file is added to the project!');
                 })
