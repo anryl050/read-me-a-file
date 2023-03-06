@@ -1,8 +1,8 @@
 
 
-# g
+# READ-ME-A-FILE
 
-![Badge](https://img.shields.io/badge/license-Apache2.0-green?style=plastic&logo=appveyor)
+![Badge](https://img.shields.io/badge/license-MIT-green?style=plastic&logo=appveyor)
 
 ## Table of Content
 #### * [Project Desctiption](#description)
@@ -15,28 +15,28 @@
 #### * [License](#license)
 
 ## Project Description
-g
+To create a professional README.md file
 
 ## Installation
-g
+use npm and inquirer
 
 ## Usage
-g
+n/a
 
 ## Features
-g
+n/a
 
 ## Tests
-g
+n/a
 
 ## Questions
 - example@gmail.com
 - anryl050
 
 ## Contribution
-g
+n/a
 
 ## License
-Licensed under the [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/) license.
+Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
 
   
