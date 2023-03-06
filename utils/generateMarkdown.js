@@ -6,9 +6,9 @@ const renderLicenseBadge = (license) => {
   // used replace string method to remove any extra space in the license name (help provided by the TA)
   license = license.replace(/\s/g, "")
   // used ternary operator to optimaze the code for the 'if else' loop
-return !license ? ""
-  : license === "None" ? ""
-    : `![Badge](https://img.shields.io/badge/license-${license}-green?style=plastic&logo=appveyor)`;
+  return !license ? ""
+    : license === "None" ? ""
+      : `![Badge](https://img.shields.io/badge/license-${license}-green?style=plastic&logo=appveyor)`;
 }
 
 // Created a function that returns the license link
@@ -17,7 +17,7 @@ return !license ? ""
 // used arrow function to optimize the code 
 const renderLicenseLink = (license) => {
   return !license ? ""
-  // used ternary operator to optimaze the code for the 'if else' loop
+    // used ternary operator to optimaze the code for the 'if else' loop
     : license === "Apache 2.0" ? `[${license}](https://choosealicense.com/licenses/apache-2.0/)`
       : license === "GNUPLv3" ? `[${license}](https://choosealicense.com/licenses/gpl-3.0/)`
         : license === "MIT" ? `[${license}](https://choosealicense.com/licenses/mit/)`
@@ -31,9 +31,9 @@ const renderLicenseLink = (license) => {
 
 // used arrow function to optimize the code 
 const renderLicenseSection = (license) => {
-   // used ternary operator to optimaze the code for the 'if else' loop
+  // used ternary operator to optimaze the code for the 'if else' loop
   return license ? `Licensed under the ${renderLicenseLink(license)} license.`
-  : '';
+    : '';
 }
 
 //Created a function to generate markdown for README
@@ -72,8 +72,8 @@ ${answers.features}
 ${answers.tests}
 
 ## Questions
-${answers.email}
-${answers.github}
+- ${answers.email}
+- ${answers.github}
 
 ## Contribution
 ${answers.contribution}
